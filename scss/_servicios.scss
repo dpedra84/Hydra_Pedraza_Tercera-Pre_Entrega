@@ -1,0 +1,26 @@
+.contenedor_Servicios{
+    margin: 0 auto;
+}
+
+.tarjeta {
+    display: flex;
+    justify-content:center;
+    flex-direction:column;
+    width:200rem;
+    background-color: #232426;
+    border-radius: 5%;
+    color: white;
+    padding:3rem;
+    margin: 0 2rem;
+    opacity: 0.8;
+    -webkit-box-shadow: 4px 4px 19px 13px rgba(35, 43, 40, 0.23);
+    -moz-box-shadow: 4px 4px 19px 13px rgba(35, 43, 40, 0.23);
+    box-shadow: 4px 4px 19px 13px rgba(35, 43, 40, 0.23);
+}
+
+.tarjeta:hover{
+        @extend %neon;
+        color: map-get($colores, colorTexto );
+        cursor: pointer;
+}
+

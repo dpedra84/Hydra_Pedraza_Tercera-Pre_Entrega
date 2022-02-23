@@ -1,0 +1,31 @@
+.contenedor_Contacto {
+    margin: 0 auto;
+    
+}
+
+#contactForm {
+    width: 100%;
+    height: 35rem;
+    background-color: white;
+    padding: 4rem;
+}
+
+.imagen_Contacto {
+    width: 100%;
+    height: 35rem;
+    background-image: url(../images/image_contact.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 4rem;
+}
+
+.btn-enviar{
+    background-color: map-get( $colores, ColorPrimario);
+    color: map-get( $colores, colorTexto);
+}
+
+.btn-enviar:hover{
+    @extend %neon;
+    color: map-get( $colores, colorTexto);
+    cursor: pointer;
+}

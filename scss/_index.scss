@@ -1,0 +1,27 @@
+.cBlanco{
+    color:white;
+}
+
+.contenedor_Texto{
+    text-align: justify;
+    margin:5% auto;
+}
+
+.contenedor_Texto p{
+    text-align: justify;
+    padding:1rem;
+ 
+}
+.btn-animado {
+    border: 1px solid #04BF68;
+    background-color: #04BF68;
+    color: map-get($colores, colorTexto );
+    transition: 0.2s ease-in-out;
+}
+
+.btn-animado:hover {
+   @extend %neon;
+   color: map-get($colores, colorTexto );
+}
+
+

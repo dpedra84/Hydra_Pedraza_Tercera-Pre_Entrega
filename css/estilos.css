@@ -1,0 +1,356 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.btn-animado:hover, .tarjeta:hover, .btn-enviar:hover, .btn-perfil:hover {
+  border-radius: 2%;
+  box-shadow: 0 0 3px , 0 0 10px #22e77b, 0 0 20px #22e77b;
+  transition-delay: 0.2s; }
+
+html,
+body {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  background-image: url(../images/Fondo2.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 10%;
+  background-size: cover;
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden; }
+
+.navbar {
+  height: 90px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px; }
+
+.navbar-buttons {
+  position: relative;
+  width: 155px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10; }
+
+.general {
+  margin: 5% auto; }
+
+/* Sing In Button */
+.button {
+  background-color: rgba(44, 45, 47, 0.749);
+  width: 97px;
+  height: 30px;
+  font-size: 12px;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  z-index: 10; }
+
+.overlay {
+  position: fixed;
+  background: rgba(51, 55, 69, 0.8);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  transition: opacity .35s, visibility .35s, height .35s;
+  overflow: hidden;
+  z-index: 10; }
+
+.overlay.open {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+  z-index: 10; }
+
+.overlay .nav-title {
+  font-size: 22px;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 8%;
+  z-index: 10; }
+
+.overlay nav {
+  position: relative;
+  height: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 10px;
+  z-index: 10; }
+
+.overlay ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+  height: 100%;
+  z-index: 10; }
+
+.overlay ul li {
+  display: block;
+  position: relative;
+  opacity: 0;
+  margin-bottom: 50px;
+  z-index: 10; }
+
+.overlay ul li a {
+  display: block;
+  position: relative;
+  color: white;
+  text-decoration: none;
+  overflow: hidden;
+  z-index: 10; }
+
+.overlay ul li a:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 43.5%;
+  width: 0%;
+  transform: translateX(-50%);
+  height: 3px;
+  background: white;
+  transition: .35s;
+  z-index: 10; }
+
+.overlay ul li a:hover,
+.overlay ul li a:focus,
+.overlay ul li a:active {
+  color: #04BF68; }
+
+.overlay ul li a:hover:after,
+.overlay ul li a:focus:after,
+.overlay ul li a:active:after {
+  width: 100%;
+  background: #04BF68; }
+
+.overlay.open li {
+  animation: fadeInRight .5s ease forwards;
+  animation-delay: .35s; }
+
+.overlay.open li:nth-of-type(2) {
+  animation-delay: .4s; }
+
+.overlay.open li:nth-of-type(3) {
+  animation-delay: .45s; }
+
+.overlay.open li:nth-of-type(4) {
+  animation-delay: .50s; }
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%; }
+  100% {
+    opacity: 1;
+    left: 0; } }
+
+button:focus {
+  outline: 0; }
+
+.open-menu,
+.close-menu,
+.button {
+  cursor: pointer;
+  transition: transform 0.30s; }
+
+.open-menu:hover,
+.close-menu:hover,
+.button:hover {
+  transform: scale(1.1); }
+
+.contenedor_footer {
+  margin-top: 10%; }
+
+/*
+---- Responsive
+*/
+@media screen and (max-width: 1280px) {
+  .overlay nav {
+    font-size: 30px; } }
+
+@media screen and (max-width: 500px) {
+  .overlay nav {
+    font-size: 20px; } }
+
+.cBlanco {
+  color: white; }
+
+.contenedor_Texto {
+  text-align: justify;
+  margin: 5% auto; }
+
+.contenedor_Texto p {
+  text-align: justify;
+  padding: 1rem; }
+
+.btn-animado {
+  border: 1px solid #04BF68;
+  background-color: #04BF68;
+  color: white;
+  transition: 0.2s ease-in-out; }
+
+.btn-animado:hover {
+  color: white; }
+
+.contenedor_Servicios {
+  margin: 0 auto; }
+
+.tarjeta {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 200rem;
+  background-color: #232426;
+  border-radius: 5%;
+  color: white;
+  padding: 3rem;
+  margin: 0 2rem;
+  opacity: 0.8;
+  -webkit-box-shadow: 4px 4px 19px 13px rgba(35, 43, 40, 0.23);
+  -moz-box-shadow: 4px 4px 19px 13px rgba(35, 43, 40, 0.23);
+  box-shadow: 4px 4px 19px 13px rgba(35, 43, 40, 0.23); }
+
+.tarjeta:hover {
+  color: white;
+  cursor: pointer; }
+
+.contenedor_Portfolio {
+  margin: 2% auto; }
+
+#portfolio .portfolio-item {
+  width: 20rem;
+  margin-left: auto;
+  margin-right: auto; }
+
+#portfolio .portfolio-item .portfolio-link {
+  position: relative;
+  display: block;
+  margin: 0 auto; }
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(4, 191, 104, 0.5);
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity ease-in-out 0.25s; }
+
+#portfolio .portfolio-item .portfolio-link:hover .portfolio-hover {
+  opacity: 1; }
+
+.modal-content {
+  background-color: transparent;
+  border: none; }
+
+.portfolio-modal .modal-dialog {
+  margin: 5rem auto;
+  max-width: 50vw; }
+
+.portfolio-modal .modal-content {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  text-align: center; }
+
+.portfolio-modal .modal-content h2,
+.portfolio-modal .modal-content .h2 {
+  font-size: 3rem;
+  line-height: 3rem; }
+
+.portfolio-modal .modal-content p.item-intro {
+  font-style: italic;
+  margin-bottom: 2rem;
+  font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
+
+.portfolio-modal .modal-content p {
+  margin-bottom: 2rem; }
+
+.portfolio-modal .modal-content ul.list-inline {
+  margin-bottom: 2rem; }
+
+.portfolio-modal .modal-content img {
+  margin-bottom: 2rem; }
+
+.portfolio-modal .close-modal {
+  position: absolute;
+  bottom: 22%;
+  left: 48%;
+  right: 48%;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  background-color: transparent;
+  z-index: 15; }
+
+.contenedor_Contacto {
+  margin: 0 auto; }
+
+#contactForm {
+  width: 100%;
+  height: 35rem;
+  background-color: white;
+  padding: 4rem; }
+
+.imagen_Contacto {
+  width: 100%;
+  height: 35rem;
+  background-image: url(../images/image_contact.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 4rem; }
+
+.btn-enviar {
+  background-color: #04BF68;
+  color: white; }
+
+.btn-enviar:hover {
+  color: white;
+  cursor: pointer; }
+
+.contenedor_Nosotros {
+  margin: 5% auto; }
+
+.card {
+  border: 0;
+  background-color: #232426; }
+
+.card-body {
+  background-color: #232426; }
+
+.card-title {
+  color: white; }
+
+.card-text {
+  color: white; }
+
+.card-img-top {
+  border-radius: 50%;
+  width: 75%;
+  margin: 0 auto;
+  padding: 1.5rem; }
+
+.btn-perfil {
+  background-color: #04BF68;
+  color: white; }
+
+.btn-perfil:hover {
+  color: white; }

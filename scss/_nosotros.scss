@@ -1,0 +1,38 @@
+.contenedor_Nosotros {
+    margin: 5% auto;
+}
+
+.card {
+    border: 0;
+    background-color: map-get($colores, colorSecundario );
+}
+
+.card-body {
+    background-color: map-get($colores, colorSecundario );
+
+}
+
+.card-title {
+    color: map-get($colores, colorTexto );
+}
+
+.card-text {
+    color: map-get($colores, colorTexto );
+}
+
+.card-img-top {
+    border-radius: 50%;
+    width: 75%;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+.btn-perfil{
+    background-color:#04BF68;
+    color: map-get($colores, colorTexto );
+}
+
+.btn-perfil:hover{
+    @extend %neon;
+    color: map-get($colores, colorTexto );
+}
